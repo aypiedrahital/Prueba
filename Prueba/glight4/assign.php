@@ -2,10 +2,8 @@
 
 require('configs/include.php');
 class c_assign extends super_controller{
- 
-    public function display()
-
-      {
+public function display()
+{
 	
 	
 	$num1=6;
@@ -15,9 +13,9 @@ class c_assign extends super_controller{
 	$this->engine->display('assign.tpl');
 	$this->engine->display('footer.tpl');
 	
-       }
+}
 
-    public function run(){
+	public function run(){
 	$this->display();
 	}
 }

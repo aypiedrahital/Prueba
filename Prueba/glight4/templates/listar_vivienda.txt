@@ -1,0 +1,16 @@
+<table border="0" width="100" cellpadding="0" cellspacing="10">
+<tr><td><b>Listar las viviendas</b></td></tr>
+{section loop=$vivienda name=i}
+<tr><td>
+    <b>codigo:</b> {$vivienda[i]->get('codigo')}<br />
+	{if $vivienda[i]->get('estrato')==5}
+	   <b style='color:green'> Direccion: {$vivienda[i]->get('direccion')} </b> <br />
+	   {elseif $vivienda[i]->get('estrato')==4}
+	      <b style='color:red'> Direccion: {$vivienda[i]->get('direccion')} </b> <br />
+     {else}
+ 	     <b> Estrato: {$vivienda[i]->get('estrato')} </b> <br />
+		 <b> Dirección: </b> {$vivienda[i]->get('direccion')}<br/>
+         {/if}
+    </td></tr>
+{/section}
+</table>
